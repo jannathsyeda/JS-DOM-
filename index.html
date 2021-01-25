@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    article{
+        border: 2px solid tomato;
+        border-radius: 20px;
+        margin:5px;
+        padding:5px;
+    }
+</style>
+<body>
+ <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem3 -->
+   <!-- article*3>h3{article-$}+p.author>lorem40+p.description>lorem3  -->
+
+ <article class="special">
+     <h3>article-1</h3>
+     <p class="author">author-1</p>
+     <p class="description">Lorem, ipsum dolor.</p>
+ </article>
+ <article class="special">
+     <h3>article-2</h3>
+     <p title="my name is jhon" id="bestAuthor" class="author">author-2</p>
+     <p class="description">Aut, libero quia.</p>
+ </article>
+ <article>
+     <h3>article-3</h3>
+     <p class="author">author-3</p>
+     <p class="description">Sint, ipsam id.</p>
+ </article>
+
+ <script>
+     
+var result=document.getElementById('bestAuthor');
+console.log(result);
+
+var result2=document.getElementById('bestAuthor').setAttribute('title','change my name !!');
+console.log(result2);
+
+var Query1=document.querySelector('.special h3').setAttribute('title');
+console.log(Query1);
+
+var Query2=document.querySelectorAll('.special h3');
+console.log(Query2);
+
+document.body.style.backgroundColor='tomato';
+
+     var authors=document.getElementsByClassName('author');
+ for(var i=0;i< authors.length;i++)
+ {
+     var element =authors[i];
+     console.log(element);
+     console.log(element.innerHTML);
+     element.innerHTML='change-' + i;
+     element.style.backgroundColor='gray';
+     element.style.margin = '10px';
+ }
+
+
+
+
+
+ </script>
+
+</body>
+</html>
