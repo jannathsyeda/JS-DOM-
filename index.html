@@ -27,14 +27,46 @@
      <p title="my name is jhon" id="bestAuthor" class="author">author-2</p>
      <p class="description">Aut, libero quia.</p>
  </article>
- <article>
+ <article id="newParagraphAdd">
      <h3>article-3</h3>
      <p class="author">author-3</p>
      <p class="description">Sint, ipsam id.</p>
  </article>
 
- <script>
-     
+
+ <article>
+     <h1>adding li with dom</h1>
+     <ul id="addItem">
+         <li>item1</li>
+         <li>item2</li>
+         <li>item3</li>
+         <li>item4</li>
+    </ul>
+ </article>
+
+
+
+<script>
+
+const article=document.getElementById('newParagraphAdd');
+const paragraphCreate=document.createElement('p');
+paragraphCreate.innerHTML='This paragraph element added by javascript automatically!!! Here I add height ,backgroundColor ,text color, fontSize etc .';
+paragraphCreate.style.backgroundColor='tomato';
+paragraphCreate.style.color="black";
+paragraphCreate.style.height='100px';
+paragraphCreate.style.fontSize='30px';
+article.appendChild(paragraphCreate);
+
+//ul ;li adding items
+const ulItem=document.getElementById('addItem');
+const createLi=document.createElement('li');
+createLi.innerHTML='item5';
+ulItem.style.listStyle='none';
+ulItem.appendChild(createLi);
+
+
+
+
 var result=document.getElementById('bestAuthor');
 console.log(result);
 
